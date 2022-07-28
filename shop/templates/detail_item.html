@@ -1,0 +1,6 @@
+{{ item }}
+
+{% for purchase in item.purchase_set.all %}
+        <input type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ choice.id }}">
+        <label for="choice{{ forloop.counter }}">{{ purchase.name }}</label><br>
+    {% endfor %}
